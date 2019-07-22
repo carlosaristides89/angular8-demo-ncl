@@ -7,24 +7,26 @@
         <div class="row">
             <div class="col-md-6 form-group form-group-sm has-feedback">
                 <label>Number 1:</label>
-                <input type="number" class="form-control" name="number_1" [(ngModel)]="operation.number_1" required/>
+                <input type="number" class="form-control" id="number_1" name="number_1" [(ngModel)]="operation.number_1" #number_1="ngModel" required/>
+                <span class="help-block" *ngIf="number_1.invalid"> This field is required </span>
             </div>
             <div class="col-md-6 form-group form-group-sm has-feedback">
                 <label>Select Operation:</label>
-                <select class="form-control" name="operator" [(ngModel)]="operation.operator" required>
+                <select class="form-control" name="operator" [(ngModel)]="operation.operator" #operator="ngModel"required>
                     <option value=""></option>
                     <option value="Sum">Sum</option>
                     <option value="Subtraction">Subtraction</option>
                     <option value="Multiplication">Multiplication</option>
                     <option value="Division">Division</option>
                 </select>
+                <span class="help-block" *ngIf="operator.invalid"> This field is required </span>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 form-group form-group-sm has-feedback">
                 <label>Number 2:</label>
-                <input type="number" class="form-control" name="number_2" [(ngModel)]="operation.number_2" required/>
-                <span *ngIf="!number_2.valid">Thi field is required</span>
+                <input type="number" class="form-control" name="number_2" [(ngModel)]="operation.number_2" #number_2="ngModel" required/>
+                <span class="help-block" *ngIf="number_2.invalid"> This field is required </span>
             </div>
             <div class="col-md-6 form-group form-group-sm has-feedback">
                 <label>Result:</label>
