@@ -1,0 +1,41 @@
+
+<div class="card-element">
+    <header class="header">
+        <h4 class="txc">CALCULATOR</h4>
+    </header>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6 form-group form-group-sm has-feedback">
+                <label>Number 1:</label>
+                <input type="number" class="form-control" name="number_1" [(ngModel)]="operation.number_1" required/>
+            </div>
+            <div class="col-md-6 form-group form-group-sm has-feedback">
+                <label>Select Operation:</label>
+                <select class="form-control" name="operator" [(ngModel)]="operation.operator" required>
+                    <option value=""></option>
+                    <option value="Sum">Sum</option>
+                    <option value="Subtraction">Subtraction</option>
+                    <option value="Multiplication">Multiplication</option>
+                    <option value="Division">Division</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-group form-group-sm has-feedback">
+                <label>Number 2:</label>
+                <input type="number" class="form-control" name="number_2" [(ngModel)]="operation.number_2" required/>
+                <span *ngIf="!number_2.valid">Thi field is required</span>
+            </div>
+            <div class="col-md-6 form-group form-group-sm has-feedback">
+                <label>Result:</label>
+                <input type="number" [readonly]="!childmessage" class="form-control" name="result" [(ngModel)]="operation.result"/>
+            </div>
+        </div>
+    </div> <!-- card end -->
+    <footer class="card-footer">
+        <button type="button" class="btn btn-primary" (click)="onSubmit()">Calculate</button>
+        <button type="button" class="btn btn-success" (click)="onReset()">Reset</button>
+    </footer>
+</div>
+
+

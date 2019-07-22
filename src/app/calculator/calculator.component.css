@@ -1,0 +1,44 @@
+.main{
+	margin-top:150px;
+}
+.txc {
+  color:white;
+}
+
+.header-color {
+  background: black;
+}
+.card-element {
+  width: 45%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  background: white;
+  margin-top: 4%;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+.card-element > .header {
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(255,149,0, 0.9);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.card-element > .header h4 {
+  margin: 0
+}
+
+.card-element > .card-body {
+  background-color: rgba(153,153,153, 0.1);
+  padding: 10px;
+}
+
+.card-element > .card-footer {
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  background-color: rgba(153,153,153, 0.2);
+}
